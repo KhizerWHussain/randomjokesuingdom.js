@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Practice</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    nav {
+        display: flex;
+        background-color: darkslategray;
+        padding: 16px 0;
+        position: sticky;
+    }
+    nav li {
+        list-style-type: none;
+        color: white;
+        padding: 0 32px;
+        font-size: 20px;
+    }
+    #div {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: absolute;
+    }
+    #div #para {
+        font-size: 1.5rem;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 500;
+        font-kerning: normal;
+        font-stretch: expanded;
+        font-variant: normal;
+        font-feature-settings:"abvf";
+        font-language-override: normal;
+    }
+</style>
+<body onload="joke()">
+    <nav>
+        <li>Home</li>
+        <li>Catalogue</li>
+        <li>About</li>
+        <li>Contact</li>
+    </nav>
+    <div id="div">
+        <p id="para">Jokes here</p>
+    </div>
+    <script>
+        // jokes js
+        function joke () {
+            let jokes = [
+            'Why did the chicken cross the playground? To get to the other slide!',
+            'Why did the actor fall through the floorboards? They were going through a stage!',
+            'Why did a scarecrow win a Nobel prize? He was outstanding in his field!',
+            'Why did a scarecrow win a Nobel prize? He was outstanding in his field!',
+            'What did the duck say after she bought chapstick? Put it on my bill!',
+            'Why did an old man fall in a well? Because he couldn’t see that well!'];
+            let para = document.getElementById("para");
+            para.innerHTML = jokes[Math.floor(Math.random() * jokes.length)];
+        }    
+        </script>
+</body >
+</html >
